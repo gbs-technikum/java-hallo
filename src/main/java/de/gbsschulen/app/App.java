@@ -12,8 +12,10 @@ public class App
     {
         System.out.println( "Hello World!" );
         List<String> myList = Arrays.asList("element1","element2","element3");
-        for (String element : myList) {
-            System.out.println (element);
-        }        
+        myList.forEach(new Consumer<String>() {
+            public void accept(String element) {
+                System.out.println(element);
+            }
+        });      
     }
 }
